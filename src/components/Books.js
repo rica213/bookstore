@@ -1,6 +1,8 @@
+import Book from './Book';
+
 const Books = () => (
   <>
-    <h1>List of books</h1>
+    <Book title="Book one" author="Author one" />
     <form>
       <input type="text" placeholder="new book" />
       <input type="text" placeholder="author" />
