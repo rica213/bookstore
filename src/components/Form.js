@@ -1,6 +1,6 @@
-import { addBook } from "../redux/books/booksSlice";
-import { useDispatch } from "react-redux";
-import { useState } from "react";
+import { useDispatch } from 'react-redux';
+import { useState } from 'react';
+import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -11,7 +11,7 @@ const Form = () => {
     dispatch(addBook({ title, author }));
     setTitle('');
     setAuthor('');
-  }
+  };
   return (
     <form>
       <input
