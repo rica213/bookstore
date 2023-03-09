@@ -53,6 +53,9 @@ This is a React web application to list books, and update that list by adding a 
 - **[set up linters]**
 - **[Components]**
 - **[Route with React Route]**
+- **[Use Redux to manage the state]**
+- **[Add addNewBook action]**
+- **[Add remove a book action]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -113,7 +116,6 @@ Your app is ready to be deployed!
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Add functionalities]**
 - [ ] **[Styling]**
 - [ ] **[Full website]**
 - [ ] **[Tests]**
