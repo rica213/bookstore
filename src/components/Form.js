@@ -1,14 +1,17 @@
-import { useDispatch } from 'react-redux';
+/* eslint-disable camelcase */
+import { useDispatch, useSelector } from 'react-redux';
 import { useState } from 'react';
 import { addBook } from '../redux/books/booksSlice';
 
 const Form = () => {
   const [title, setTitle] = useState('');
   const [author, setAuthor] = useState('');
+  const { books } = useSelector((state) => state.books);
   const dispatch = useDispatch();
   const handleAddNewBook = (e) => {
     e.preventDefault();
-    dispatch(addBook({ title, author }));
+    const item_id = `item${books.length + 1}`;
+    dispatch(addBook({ item_id, title, author }));
     setTitle('');
     setAuthor('');
   };

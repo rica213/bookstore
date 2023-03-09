@@ -13,7 +13,7 @@ const Books = () => {
           key={uuidv4()}
           title={book.title}
           author={book.author}
-          id={book.item_id}
+          item_id={book.item_id}
         />
       ))}
       <Form />
