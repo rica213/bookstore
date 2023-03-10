@@ -1,4 +1,3 @@
-/* eslint-disable no-param-reassign */
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
@@ -55,9 +54,10 @@ const booksSlice = createSlice({
   name: 'books',
   initialState,
   reducers: {
-    addBook: (state, action) => {
-      state.books = [...state.books, action.payload];
-    },
+    addBook: (state, action) => ({
+      ...state,
+      books: [...state.books, action.payload],
+    }),
     removeBook: (state, { payload }) => ({
       ...state,
       books: state.books.filter((book) => book.item_id !== payload),
@@ -65,24 +65,27 @@ const booksSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder
-      .addCase(postBook.pending, (state) => {
-        state.isLoading = true;
-      })
-      .addCase(postBook.fulfilled, (state) => {
-        state.isLoading = false;
-      })
-      .addCase(postBook.rejected, (state) => {
-        state.isLoading = false;
-      });
+      .addCase(postBook.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
+      .addCase(postBook.fulfilled, (state) => ({
+        ...state,
+        isLoading: false,
+      }))
+      .addCase(postBook.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+      }));
 
     builder
-      .addCase(getBooks.pending, (state) => {
-        state.isLoading = true;
-      })
+      .addCase(getBooks.pending, (state) => ({
+        ...state,
+        isLoading: true,
+      }))
       .addCase(getBooks.fulfilled, (state, action) => {
-        state.isLoading = false;
+        const newState = { ...state, isLoading: false };
         const resObject = action.payload;
-
         const newBooksArr = [];
 
         Object.keys(resObject).forEach((id) => {
@@ -91,11 +94,13 @@ const booksSlice = createSlice({
           newBooksArr.push(bookObj);
         });
 
-        state.books = newBooksArr;
+        newState.books = newBooksArr;
+        return newState;
       })
-      .addCase(getBooks.rejected, (state) => {
-        state.isLoading = false;
-      });
+      .addCase(getBooks.rejected, (state) => ({
+        ...state,
+        isLoading: false,
+      }));
   },
 });
 
