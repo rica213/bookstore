@@ -41,7 +41,7 @@ const Form = () => {
           type="text"
           placeholder="Book Author"
           onChange={(e) => setAuthor(e.target.value)}
-          className="author-input"
+          className={styles.authorInput}
           required
         />
         <button
