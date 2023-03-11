@@ -34,7 +34,7 @@
 
 <!-- PROJECT DESCRIPTION -->
 
-# 📖 [Math-magicians] <a name="about-project"></a>
+# 📖 [Bookstore] <a name="about-project"></a>
 
 
 This is a React web application to list books, and update that list by adding a new book or removing a selected book.
