@@ -1,0 +1,24 @@
+.container {
+  background-color: aliceblue;
+  margin: 0 1.5rem;
+  padding: 1rem;
+  min-height: 100vh;
+}
+
+.checkStatus {
+  all: unset;
+  background-color: #0290ff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 540px) {
+  .container {
+    margin: 3rem;
+    margin-top: 0;
+  }
+}

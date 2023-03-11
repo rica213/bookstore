@@ -1,0 +1,58 @@
+.formTitle {
+  text-transform: uppercase;
+  font-size: 1.25rem;
+  color: #888;
+  margin: 2rem 1.5rem;
+}
+
+.form {
+  margin: 0 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.form input {
+  padding: 1.5rem;
+  font-size: 1.125rem;
+  margin: 0.5rem 0;
+}
+
+.addBtn {
+  all: unset;
+  background-color: #0290ff;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1rem;
+  cursor: pointer;
+  text-align: center;
+  border-radius: 4px;
+}
+
+@media screen and (min-width: 540px) {
+  .formTitle {
+    margin: 2rem 3rem;
+  }
+
+  .form {
+    margin: 0 3rem;
+    flex-direction: row;
+  }
+
+  .form input {
+    margin: 0.5rem 0.25rem;
+    padding: 0.5rem;
+  }
+
+  .titleInput {
+    width: 65%;
+  }
+
+  .authorInput {
+    width: 20%;
+  }
+
+  .addBtn {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem;
+  }
+}
