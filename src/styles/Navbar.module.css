@@ -13,6 +13,9 @@
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem;
+  background-color: #fff;
+  padding: 2.5rem;
+  border-radius: 5px 5px 0 0;
 }
 
 .navLeftSide {
@@ -52,12 +55,11 @@ a:active {
   color:#0290ff;
 }
 
-
 @media screen and (min-width: 540px) {
   .navbar {
     margin: 3rem;
   }
-  
+
   .navLeftSide {
     flex-direction: row;
     align-items: center;
