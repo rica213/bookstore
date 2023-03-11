@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { useState } from 'react';
 import { v4 as uuidv4 } from 'uuid';
 import { addBook, postBook } from '../redux/books/booksSlice';
+import styles from '../styles/Form.module.css';
 
 const Form = () => {
   const [title, setTitle] = useState('');
@@ -26,28 +27,32 @@ const Form = () => {
   };
 
   return (
-    <form>
-      <input
-        type="text"
-        placeholder="title"
-        onChange={(e) => setTitle(e.target.value)}
-        className="title-input"
-        required
-      />
-      <input
-        type="text"
-        placeholder="author"
-        onChange={(e) => setAuthor(e.target.value)}
-        className="author-input"
-        required
-      />
-      <button
-        type="button"
-        onClick={handleAddNewBook}
-      >
-        Add book
-      </button>
-    </form>
+    <>
+      <h2 className={styles.formTitle}>Add new book</h2>
+      <form className={styles.form}>
+        <input
+          type="text"
+          placeholder="Book Title"
+          onChange={(e) => setTitle(e.target.value)}
+          className={styles.titleInput}
+          required
+        />
+        <input
+          type="text"
+          placeholder="Book Author"
+          onChange={(e) => setAuthor(e.target.value)}
+          className="author-input"
+          required
+        />
+        <button
+          type="button"
+          onClick={handleAddNewBook}
+          className={styles.addBtn}
+        >
+          Add book
+        </button>
+      </form>
+    </>
   );
 };
 

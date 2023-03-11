@@ -1,0 +1,12 @@
+.bookContainer {
+  background-color: aliceblue;
+  margin: 0 1.5rem;
+  padding: 1rem;
+}
+
+@media screen and (min-width: 540px) {
+  .bookContainer {
+    margin: 3rem;
+    margin-top: 0;
+  }
+}

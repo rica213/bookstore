@@ -3,9 +3,8 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: 0;
+  box-sizing: border-box;
 }
-
 
 .navbar {
   font-family: "Montserrat", sans-serif;
@@ -13,6 +12,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 1.5rem;
+  margin-bottom: 0;
   background-color: #fff;
   padding: 2.5rem;
   border-radius: 5px 5px 0 0;
@@ -52,12 +52,13 @@ a:active {
 }
 
 .user {
-  color:#0290ff;
+  color: #0290ff;
 }
 
 @media screen and (min-width: 540px) {
   .navbar {
     margin: 3rem;
+    margin-bottom: 0;
   }
 
   .navLeftSide {
