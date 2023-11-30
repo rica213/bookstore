@@ -116,10 +116,9 @@ Your app is ready to be deployed!
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Styling]**
-- [ ] **[Full website]**
 - [ ] **[Tests]**
-- [ ] **[Deployement]**
+- [ ] **[Complete CRUD functionality]**
+- [ ] **[Work on the progress status]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
