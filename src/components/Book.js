@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { removeBook, deleteBookFromApi } from '../redux/books/booksSlice';
 import styles from '../styles/Book.module.css';
+import capitalize from '../helpers/format';
 
 const Book = ({ item_id, title, author }) => {
   const dispatch = useDispatch();
@@ -13,11 +14,11 @@ const Book = ({ item_id, title, author }) => {
   return (
     <article className={styles.bookItem}>
       <section className={styles.bookInfo}>
-        <h3 className={styles.title}>{title}</h3>
+        <h3 className={styles.title}>{capitalize(title)}</h3>
         <p className={styles.author}>
           <span style={{ color: 'black' }}>by</span>
           {' '}
-          {author}
+          {capitalize(author)}
         </p>
         <section className={styles.actionBtn}>
           <button type="button" className={styles.btn}>
