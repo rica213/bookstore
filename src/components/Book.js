@@ -14,7 +14,11 @@ const Book = ({ item_id, title, author }) => {
     <article className={styles.bookItem}>
       <section className={styles.bookInfo}>
         <h3 className={styles.title}>{title}</h3>
-        <p className={styles.author}>{author}</p>
+        <p className={styles.author}>
+          <span style={{ color: 'black' }}>by</span>
+          {' '}
+          {author}
+        </p>
         <section className={styles.actionBtn}>
           <button type="button" className={styles.btn}>
             Comments
@@ -37,7 +41,9 @@ const Book = ({ item_id, title, author }) => {
       <section className={styles.currentChap}>
         <p className={styles.currentChapTitle}>Current chapter</p>
         <p className={styles.chapter}>Chapter 6</p>
-        <button type="button" className={styles.updateBtn}>update progress</button>
+        <button type="button" className={styles.updateBtn}>
+          update progress
+        </button>
       </section>
     </article>
   );
