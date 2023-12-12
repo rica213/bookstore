@@ -63,7 +63,7 @@ This is a React web application to list books, and update that list by adding a 
 
 ## 🚀 Live Demo <a name="live-demo"></a>
 
-- [Live Demo Link not added yet](#)
+- [Live Demo](https://bookstore-nine-ochre.vercel.app/ )
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -116,10 +116,9 @@ Your app is ready to be deployed!
 
 ## 🔭 Future Features <a name="future-features"></a>
 
-- [ ] **[Styling]**
-- [ ] **[Full website]**
 - [ ] **[Tests]**
-- [ ] **[Deployement]**
+- [ ] **[Complete CRUD functionality]**
+- [ ] **[Work on the progress status]**
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
